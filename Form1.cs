@@ -9,10 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu;
 using System.IO;
+using System.Threading;
+
 namespace WeatherApp
 {
     public partial class Form1 : Form
     {
+        TimerCallback tm;
+        System.Threading.Timer timerThread;
         public string[] data;
         public string temp;
         public string feels;
@@ -50,22 +54,23 @@ namespace WeatherApp
             Rectangle screenSize = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
             this.Location = new Point(screenSize.Width - this.Width - 10, 10);
 
-            Timer timer = new Timer();
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
             timer.Tick += new EventHandler(timer_tick);
             timer.Interval = 1000;
             timer.Start();
 
             states = new string[]
             {
-                "Clear sky",
-                "Few clouds",
-                "Scattered clouds",
-                "Broken clouds",
-                "Shower rain",
+                "Clear",
+                "Clouds",
+                "Clouds",
+                "Clouds",
+                "Drizzle",
                 "Rain",
                 "Thunderstorm",
                 "Snow",
-                "Mist"
+                "Mist",
+                "Default"
             };
 
             statePictures = new PictureBox[]
@@ -78,7 +83,8 @@ namespace WeatherApp
                 pbRain,
                 pbThander,
                 pbSnow,
-                pbFog
+                pbFog,
+                pbDefault
             };
 
             pbCloudy.Visible = false;
@@ -91,8 +97,9 @@ namespace WeatherApp
             pbThander.Visible = false;
             pbLightRain.Visible = false;
             pbDefault.Visible = false;
-
-            GetData();
+            tm = new TimerCallback(GetData);
+            timerThread = new System.Threading.Timer(tm, null, 0, 600000);
+            
             //switch (state)
             //{
             //    case "Clear sky":
@@ -142,7 +149,7 @@ namespace WeatherApp
 
         }
 
-        private void GetData()
+        private void GetData(object obj)
         {
             data = File.ReadAllText(@"E:\CurrentWeather.txt").Split(';');
             temp = Math.Round(double.Parse(data[0])).ToString();
@@ -151,41 +158,46 @@ namespace WeatherApp
 
             if (temp.Length == 1)
             {
-                lblTemp.Location = new Point(78, 186);
-                lblO.Location = new Point(111, 188);
+                this.Invoke((MethodInvoker)(() => lblTemp.Location = new Point(78, 186)));
+                this.Invoke((MethodInvoker)(() => lblO.Location = new Point(111, 188)));
             }
 
             if (temp.Length == 3)
             {
-                lblTemp.Location = new Point(53, 186);
-                lblO.Location = new Point(126, 188);
+                this.Invoke((MethodInvoker)(() => lblTemp.Location = new Point(53, 186)));
+                this.Invoke((MethodInvoker)(() => lblO.Location = new Point(126, 188)));
             }
 
             if (temp.Length == 2 && !temp.Contains("-"))
             {
-                lblTemp.Location = new Point(66, 186);
-                lblO.Location = new Point(123, 188);
+                this.Invoke((MethodInvoker)(() => lblTemp.Location = new Point(66, 186)));
+                this.Invoke((MethodInvoker)(() => lblO.Location = new Point(123, 188)));
+                
             }
 
             if (temp.Length == 2 && temp.Contains("-"))
             {
-                lblTemp.Location = new Point(63, 186);
-                lblO.Location = new Point(112, 188);
+                this.Invoke((MethodInvoker)(() => lblTemp.Location = new Point(63, 186)));
+                this.Invoke((MethodInvoker)(() => lblO.Location = new Point(112, 188)));
             }
 
-
-            lblTemp.Text = temp;
-            lblFeels.Text = feels;
-
-            for (int i = 0; i < states.Length; i++)
+            this.Invoke((MethodInvoker)(() => lblTemp.Text = temp));
+            this.Invoke((MethodInvoker)(() => lblFeels.Text = feels));
+           
+            int count = 0;
+            for (int i = 0; i < statePictures.Length; i++)
             {
+                
                 if (state == states[i])
                 {
-                    statePictures[i].Visible = true;
+                    count++;
+                    this.Invoke((MethodInvoker)(() => statePictures[i].Visible = true));
                     continue;
                 }
-                statePictures[i].Visible = false;
+                this.Invoke((MethodInvoker)(() => statePictures[i].Visible = false));
             }
+            if(count == 0)
+                this.Invoke((MethodInvoker)(() => pbDefault.Visible = true));
         }
     }
 }
