@@ -15,6 +15,7 @@ namespace WeatherApp
 {
     public partial class Form1 : Form
     {
+        string[][] stateID = new string[9][];
         TimerCallback tm;
         System.Threading.Timer timerThread;
         public string[] data;
@@ -59,94 +60,50 @@ namespace WeatherApp
             timer.Interval = 1000;
             timer.Start();
 
-            states = new string[]
-            {
-                "Clear",
-                "Clouds",
-                "Clouds",
-                "Clouds",
-                "Drizzle",
-                "Rain",
-                "Thunderstorm",
-                "Snow",
-                "Mist",
-                "Default"
-            };
+
+           
 
             statePictures = new PictureBox[]
             {
-                pbSun,
-                pbSunny,
-                pbCloudy,
-                pbOvercast,
-                pbLightRain,
+                pbClearSky,
+                pbFewClouds,
+                pbScatteredClouds,
+                pbBrokenClouds,
+                pbShowerRain,
                 pbRain,
-                pbThander,
+                pbThunderstorm,
                 pbSnow,
-                pbFog,
-                pbDefault
+                pbMist
             };
 
-            pbCloudy.Visible = false;
-            pbFog.Visible = false;
-            pbOvercast.Visible = false;
+            pbClearSky.Visible = false;
+            pbFewClouds.Visible = false;
+            pbScatteredClouds.Visible = false;
+            pbBrokenClouds.Visible = false;
+            pbShowerRain.Visible = false;
             pbRain.Visible = false;
+            pbThunderstorm.Visible = false;
             pbSnow.Visible = false;
-            pbSun.Visible = false;
-            pbSunny.Visible = false;
-            pbThander.Visible = false;
-            pbLightRain.Visible = false;
-            pbDefault.Visible = false;
+            pbMist.Visible = false;
+            
+            stateID[0] = new string[] { "800" };
+            stateID[1] = new string[] { "801" };
+            stateID[2] = new string[] { "802" };
+            stateID[3] = new string[] { "803", "804" };
+            stateID[4] = new string[] { "300", "301", "302", "310", "311", "312",
+                "313", "314", "321", "520", "521", "522", "531"};
+            stateID[5] = new string[] { "500", "501", "502", "503", "504" };
+            stateID[6] = new string[] { "200", "201", "202", "210", "211", "212", "221",
+                "230", "231", "232" };
+            stateID[7] = new string[] { "511", "600", "601", "602", "611", "612", "613",
+                "615", "616", "620", "621", "622" };
+            stateID[8] = new string[] { "701", "711", "721", "731", "741", "751", "761",
+                "762", "771", "781" };
+
             tm = new TimerCallback(GetData);
             timerThread = new System.Threading.Timer(tm, null, 0, 600000);
             
-            //switch (state)
-            //{
-            //    case "Clear sky":
-            //        pbSun.Visible = true;
-            //        pbSunny.Visible = false;
-
-            //        break;
-
-            //    case "Few clouds":
-            //        pbSunny.Visible = true;
-            //        break;
-
-            //    case "Scattered clouds":
-            //        pbCloudy.Visible = true;
-            //        break;
-
-            //    case "Broken clouds":
-            //        pbOvercast.Visible = true;
-            //        break;
-
-            //    case "Shower rain":
-            //        pbLightRain.Visible = true;
-            //        break;
-
-            //    case "Rain":
-            //        pbRain.Visible = true;
-            //        break;
-
-            //    case "Thanderstorm":
-            //        pbThander.Visible = true;
-            //        break;
-
-            //    case "Snow":
-            //        pbSnow.Visible = true;
-            //        break;
-
-            //    case "Mist":
-            //        pbFog.Visible = true;
-            //        break;
-
-            //    default:
-            //        pbDefault.Visible = true;
-            //        break;
-
-            //}
-
-
+            
         }
 
         private void GetData(object obj)
@@ -184,20 +141,20 @@ namespace WeatherApp
             this.Invoke((MethodInvoker)(() => lblTemp.Text = temp));
             this.Invoke((MethodInvoker)(() => lblFeels.Text = feels));
            
-            int count = 0;
-            for (int i = 0; i < statePictures.Length; i++)
+            
+            for (int i = 0; i < stateID.Length; i++)
             {
-                
-                if (state == states[i])
-                {
-                    count++;
-                    this.Invoke((MethodInvoker)(() => statePictures[i].Visible = true));
-                    continue;
-                }
                 this.Invoke((MethodInvoker)(() => statePictures[i].Visible = false));
+
+                for (int j = 0; j < stateID[i].Length; j++)
+                {
+                    if (state.Equals(stateID[i][j]))
+                    {
+                        this.Invoke((MethodInvoker)(() => statePictures[i].Visible = true));
+                        break;
+                    }
+                }
             }
-            if(count == 0)
-                this.Invoke((MethodInvoker)(() => pbDefault.Visible = true));
         }
     }
 }

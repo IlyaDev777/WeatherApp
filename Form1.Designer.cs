@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.lblTemp = new System.Windows.Forms.Label();
             this.lblFeels = new System.Windows.Forms.Label();
-            this.pbDefault = new System.Windows.Forms.PictureBox();
-            this.pbThander = new System.Windows.Forms.PictureBox();
-            this.pbSunny = new System.Windows.Forms.PictureBox();
-            this.pbSun = new System.Windows.Forms.PictureBox();
-            this.pbSnow = new System.Windows.Forms.PictureBox();
-            this.pbFog = new System.Windows.Forms.PictureBox();
-            this.pbRain = new System.Windows.Forms.PictureBox();
-            this.pbLightRain = new System.Windows.Forms.PictureBox();
-            this.pbOvercast = new System.Windows.Forms.PictureBox();
-            this.pbCloudy = new System.Windows.Forms.PictureBox();
             this.lblO = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDefault)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThander)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSunny)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSun)).BeginInit();
+            this.pbMist = new System.Windows.Forms.PictureBox();
+            this.pbSnow = new System.Windows.Forms.PictureBox();
+            this.pbThunderstorm = new System.Windows.Forms.PictureBox();
+            this.pbRain = new System.Windows.Forms.PictureBox();
+            this.pbShowerRain = new System.Windows.Forms.PictureBox();
+            this.pbBrokenClouds = new System.Windows.Forms.PictureBox();
+            this.pbScatteredClouds = new System.Windows.Forms.PictureBox();
+            this.pbFewClouds = new System.Windows.Forms.PictureBox();
+            this.pbClearSky = new System.Windows.Forms.PictureBox();
+            this.pbClear = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSnow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThunderstorm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLightRain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOvercast)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCloudy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowerRain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBrokenClouds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScatteredClouds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFewClouds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClearSky)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClear)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,106 +89,6 @@
             this.lblFeels.TabIndex = 11;
             this.lblFeels.Text = "7";
             // 
-            // pbDefault
-            // 
-            this.pbDefault.Image = global::WeatherApp.Properties.Resources.pumpkin;
-            this.pbDefault.Location = new System.Drawing.Point(25, 38);
-            this.pbDefault.Name = "pbDefault";
-            this.pbDefault.Size = new System.Drawing.Size(150, 150);
-            this.pbDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDefault.TabIndex = 12;
-            this.pbDefault.TabStop = false;
-            // 
-            // pbThander
-            // 
-            this.pbThander.Image = global::WeatherApp.Properties.Resources.Thunderstorms;
-            this.pbThander.Location = new System.Drawing.Point(25, 38);
-            this.pbThander.Name = "pbThander";
-            this.pbThander.Size = new System.Drawing.Size(150, 150);
-            this.pbThander.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThander.TabIndex = 9;
-            this.pbThander.TabStop = false;
-            // 
-            // pbSunny
-            // 
-            this.pbSunny.Image = global::WeatherApp.Properties.Resources.Sunny;
-            this.pbSunny.Location = new System.Drawing.Point(25, 38);
-            this.pbSunny.Name = "pbSunny";
-            this.pbSunny.Size = new System.Drawing.Size(150, 150);
-            this.pbSunny.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSunny.TabIndex = 8;
-            this.pbSunny.TabStop = false;
-            // 
-            // pbSun
-            // 
-            this.pbSun.Image = global::WeatherApp.Properties.Resources.Sun;
-            this.pbSun.Location = new System.Drawing.Point(25, 38);
-            this.pbSun.Name = "pbSun";
-            this.pbSun.Size = new System.Drawing.Size(150, 150);
-            this.pbSun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSun.TabIndex = 7;
-            this.pbSun.TabStop = false;
-            // 
-            // pbSnow
-            // 
-            this.pbSnow.Image = global::WeatherApp.Properties.Resources.Snow;
-            this.pbSnow.Location = new System.Drawing.Point(25, 38);
-            this.pbSnow.Name = "pbSnow";
-            this.pbSnow.Size = new System.Drawing.Size(150, 150);
-            this.pbSnow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSnow.TabIndex = 6;
-            this.pbSnow.TabStop = false;
-            // 
-            // pbFog
-            // 
-            this.pbFog.Image = global::WeatherApp.Properties.Resources.Fog;
-            this.pbFog.Location = new System.Drawing.Point(25, 38);
-            this.pbFog.Name = "pbFog";
-            this.pbFog.Size = new System.Drawing.Size(150, 150);
-            this.pbFog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFog.TabIndex = 5;
-            this.pbFog.TabStop = false;
-            // 
-            // pbRain
-            // 
-            this.pbRain.Image = global::WeatherApp.Properties.Resources.Rain;
-            this.pbRain.Location = new System.Drawing.Point(25, 38);
-            this.pbRain.Name = "pbRain";
-            this.pbRain.Size = new System.Drawing.Size(150, 150);
-            this.pbRain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbRain.TabIndex = 4;
-            this.pbRain.TabStop = false;
-            // 
-            // pbLightRain
-            // 
-            this.pbLightRain.Image = global::WeatherApp.Properties.Resources.Lightshowers;
-            this.pbLightRain.Location = new System.Drawing.Point(25, 38);
-            this.pbLightRain.Name = "pbLightRain";
-            this.pbLightRain.Size = new System.Drawing.Size(150, 150);
-            this.pbLightRain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLightRain.TabIndex = 3;
-            this.pbLightRain.TabStop = false;
-            // 
-            // pbOvercast
-            // 
-            this.pbOvercast.Image = global::WeatherApp.Properties.Resources.Overcast;
-            this.pbOvercast.Location = new System.Drawing.Point(25, 38);
-            this.pbOvercast.Name = "pbOvercast";
-            this.pbOvercast.Size = new System.Drawing.Size(150, 150);
-            this.pbOvercast.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbOvercast.TabIndex = 2;
-            this.pbOvercast.TabStop = false;
-            // 
-            // pbCloudy
-            // 
-            this.pbCloudy.Image = global::WeatherApp.Properties.Resources.Cloudy;
-            this.pbCloudy.Location = new System.Drawing.Point(25, 38);
-            this.pbCloudy.Name = "pbCloudy";
-            this.pbCloudy.Size = new System.Drawing.Size(150, 150);
-            this.pbCloudy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCloudy.TabIndex = 1;
-            this.pbCloudy.TabStop = false;
-            // 
             // lblO
             // 
             this.lblO.AutoSize = true;
@@ -211,25 +112,123 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Ощущается как:";
             // 
+            // pbMist
+            // 
+            this.pbMist.Image = global::WeatherApp.Properties.Resources.mist;
+            this.pbMist.Location = new System.Drawing.Point(25, 36);
+            this.pbMist.Name = "pbMist";
+            this.pbMist.Size = new System.Drawing.Size(150, 150);
+            this.pbMist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMist.TabIndex = 23;
+            this.pbMist.TabStop = false;
+            // 
+            // pbSnow
+            // 
+            this.pbSnow.Image = global::WeatherApp.Properties.Resources.snow;
+            this.pbSnow.Location = new System.Drawing.Point(25, 36);
+            this.pbSnow.Name = "pbSnow";
+            this.pbSnow.Size = new System.Drawing.Size(150, 150);
+            this.pbSnow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSnow.TabIndex = 22;
+            this.pbSnow.TabStop = false;
+            // 
+            // pbThunderstorm
+            // 
+            this.pbThunderstorm.Image = global::WeatherApp.Properties.Resources.thunderstorm;
+            this.pbThunderstorm.Location = new System.Drawing.Point(25, 36);
+            this.pbThunderstorm.Name = "pbThunderstorm";
+            this.pbThunderstorm.Size = new System.Drawing.Size(150, 150);
+            this.pbThunderstorm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThunderstorm.TabIndex = 21;
+            this.pbThunderstorm.TabStop = false;
+            // 
+            // pbRain
+            // 
+            this.pbRain.Image = global::WeatherApp.Properties.Resources.rain;
+            this.pbRain.Location = new System.Drawing.Point(25, 36);
+            this.pbRain.Name = "pbRain";
+            this.pbRain.Size = new System.Drawing.Size(150, 150);
+            this.pbRain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRain.TabIndex = 20;
+            this.pbRain.TabStop = false;
+            // 
+            // pbShowerRain
+            // 
+            this.pbShowerRain.Image = global::WeatherApp.Properties.Resources.shower_rain;
+            this.pbShowerRain.Location = new System.Drawing.Point(25, 36);
+            this.pbShowerRain.Name = "pbShowerRain";
+            this.pbShowerRain.Size = new System.Drawing.Size(150, 150);
+            this.pbShowerRain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbShowerRain.TabIndex = 19;
+            this.pbShowerRain.TabStop = false;
+            // 
+            // pbBrokenClouds
+            // 
+            this.pbBrokenClouds.Image = global::WeatherApp.Properties.Resources.broken_clouds;
+            this.pbBrokenClouds.Location = new System.Drawing.Point(25, 36);
+            this.pbBrokenClouds.Name = "pbBrokenClouds";
+            this.pbBrokenClouds.Size = new System.Drawing.Size(150, 150);
+            this.pbBrokenClouds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBrokenClouds.TabIndex = 18;
+            this.pbBrokenClouds.TabStop = false;
+            // 
+            // pbScatteredClouds
+            // 
+            this.pbScatteredClouds.Image = global::WeatherApp.Properties.Resources.scattered_clouds;
+            this.pbScatteredClouds.Location = new System.Drawing.Point(25, 36);
+            this.pbScatteredClouds.Name = "pbScatteredClouds";
+            this.pbScatteredClouds.Size = new System.Drawing.Size(150, 150);
+            this.pbScatteredClouds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbScatteredClouds.TabIndex = 17;
+            this.pbScatteredClouds.TabStop = false;
+            // 
+            // pbFewClouds
+            // 
+            this.pbFewClouds.Image = global::WeatherApp.Properties.Resources.few_clouds;
+            this.pbFewClouds.Location = new System.Drawing.Point(25, 36);
+            this.pbFewClouds.Name = "pbFewClouds";
+            this.pbFewClouds.Size = new System.Drawing.Size(150, 150);
+            this.pbFewClouds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFewClouds.TabIndex = 16;
+            this.pbFewClouds.TabStop = false;
+            // 
+            // pbClearSky
+            // 
+            this.pbClearSky.Image = ((System.Drawing.Image)(resources.GetObject("pbClearSky.Image")));
+            this.pbClearSky.Location = new System.Drawing.Point(25, 36);
+            this.pbClearSky.Name = "pbClearSky";
+            this.pbClearSky.Size = new System.Drawing.Size(150, 150);
+            this.pbClearSky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClearSky.TabIndex = 15;
+            this.pbClearSky.TabStop = false;
+            // 
+            // pbClear
+            // 
+            this.pbClear.Location = new System.Drawing.Point(25, 36);
+            this.pbClear.Name = "pbClear";
+            this.pbClear.Size = new System.Drawing.Size(150, 150);
+            this.pbClear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClear.TabIndex = 15;
+            this.pbClear.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(200, 268);
+            this.Controls.Add(this.pbMist);
+            this.Controls.Add(this.pbSnow);
+            this.Controls.Add(this.pbThunderstorm);
+            this.Controls.Add(this.pbRain);
+            this.Controls.Add(this.pbShowerRain);
+            this.Controls.Add(this.pbBrokenClouds);
+            this.Controls.Add(this.pbScatteredClouds);
+            this.Controls.Add(this.pbFewClouds);
+            this.Controls.Add(this.pbClearSky);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblO);
-            this.Controls.Add(this.pbDefault);
             this.Controls.Add(this.lblFeels);
-            this.Controls.Add(this.pbThander);
-            this.Controls.Add(this.pbSunny);
-            this.Controls.Add(this.pbSun);
-            this.Controls.Add(this.pbSnow);
-            this.Controls.Add(this.pbFog);
-            this.Controls.Add(this.pbRain);
-            this.Controls.Add(this.pbLightRain);
-            this.Controls.Add(this.pbOvercast);
-            this.Controls.Add(this.pbCloudy);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTemp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -239,16 +238,16 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pbDefault)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThander)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSunny)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSnow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThunderstorm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLightRain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOvercast)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCloudy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowerRain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBrokenClouds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScatteredClouds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFewClouds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClearSky)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,20 +256,20 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pbCloudy;
-        private System.Windows.Forms.PictureBox pbOvercast;
-        private System.Windows.Forms.PictureBox pbLightRain;
-        private System.Windows.Forms.PictureBox pbRain;
-        private System.Windows.Forms.PictureBox pbFog;
-        private System.Windows.Forms.PictureBox pbSnow;
-        private System.Windows.Forms.PictureBox pbSun;
-        private System.Windows.Forms.PictureBox pbSunny;
-        private System.Windows.Forms.PictureBox pbThander;
         private System.Windows.Forms.Label lblTemp;
         private System.Windows.Forms.Label lblFeels;
-        private System.Windows.Forms.PictureBox pbDefault;
         private System.Windows.Forms.Label lblO;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbClearSky;
+        private System.Windows.Forms.PictureBox pbClear;
+        private System.Windows.Forms.PictureBox pbFewClouds;
+        private System.Windows.Forms.PictureBox pbScatteredClouds;
+        private System.Windows.Forms.PictureBox pbBrokenClouds;
+        private System.Windows.Forms.PictureBox pbShowerRain;
+        private System.Windows.Forms.PictureBox pbRain;
+        private System.Windows.Forms.PictureBox pbThunderstorm;
+        private System.Windows.Forms.PictureBox pbSnow;
+        private System.Windows.Forms.PictureBox pbMist;
     }
 }
 

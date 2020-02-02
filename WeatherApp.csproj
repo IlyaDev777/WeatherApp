@@ -88,31 +88,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Rain.png" />
+    <None Include="Resources\clear sky.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Lightshowers.png" />
+    <None Include="Resources\mist.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fog.png" />
+    <None Include="Resources\snow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Snow.png" />
+    <None Include="Resources\thunderstorm.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sun.png" />
+    <None Include="Resources\rain.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sunny.png" />
+    <None Include="Resources\shower rain.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Thunderstorms.png" />
+    <None Include="Resources\broken clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scattered clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\few clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear sky1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pumpkin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if-weather-21-2682830_90793.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
