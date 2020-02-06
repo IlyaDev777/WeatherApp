@@ -88,37 +88,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\clear sky.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mist.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\snow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\thunderstorm.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\shower rain.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\broken clouds.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\scattered clouds.png" />
+    <None Include="Resources\clear sky.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\few clouds.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\clear sky1.png" />
+    <None Include="Resources\scattered clouds.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pumpkin.png" />
+    <None Include="Resources\shower rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunderstorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

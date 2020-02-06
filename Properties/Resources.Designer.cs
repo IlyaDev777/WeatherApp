@@ -103,16 +103,6 @@ namespace WeatherApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pumpkin {
-            get {
-                object obj = ResourceManager.GetObject("pumpkin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap rain {
             get {
                 object obj = ResourceManager.GetObject("rain", resourceCulture);

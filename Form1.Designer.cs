@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.lblTemp = new System.Windows.Forms.Label();
             this.lblFeels = new System.Windows.Forms.Label();
@@ -194,7 +193,7 @@
             // 
             // pbClearSky
             // 
-            this.pbClearSky.Image = ((System.Drawing.Image)(resources.GetObject("pbClearSky.Image")));
+            this.pbClearSky.Image = global::WeatherApp.Properties.Resources.clear_sky;
             this.pbClearSky.Location = new System.Drawing.Point(25, 36);
             this.pbClearSky.Name = "pbClearSky";
             this.pbClearSky.Size = new System.Drawing.Size(150, 150);
@@ -260,8 +259,8 @@
         private System.Windows.Forms.Label lblFeels;
         private System.Windows.Forms.Label lblO;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pbClearSky;
         private System.Windows.Forms.PictureBox pbClear;
+        private System.Windows.Forms.PictureBox pbClearSky;
         private System.Windows.Forms.PictureBox pbFewClouds;
         private System.Windows.Forms.PictureBox pbScatteredClouds;
         private System.Windows.Forms.PictureBox pbBrokenClouds;
