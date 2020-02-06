@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>weather.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Core">
       <HintPath>F:\Downloads\Bunifu UI WinForms 1.11.5.21\Bunifu.Core.dll</HintPath>
@@ -113,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="weather.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
